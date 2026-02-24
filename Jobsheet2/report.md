@@ -19,7 +19,7 @@
 
 4. Catat: (1) jumlah CPU(s), core/thread, (2) total RAM, (3) total swap. Jelaskan perbedaan RAM vs swap dalam 2–3 kalimat.
 
-jawab : jumlah cpu = 4, core/thread = 4/1, swap = 4GB.
+jawab : jumlah cpu = 2, core/thread = 2/1, swap = 4GB.
 perbedaan ram & swap = ram adalah memori fisik berkecepatan tinggi yang menyimpan data aplikasi yang sedang aktif agar bisa diakses secara instan oleh prosesor. sedangkan swap adalah area di penyimpanan SSD/HDD yang berfungsi sebagai memori cadangan ketika kapasitas RAM sudah habis terpakai. Karena menggunakan media penyimpanan fisik. seacara umum swap lebih lambat dibandingkan ram
 
 
