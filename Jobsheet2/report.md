@@ -1,7 +1,7 @@
 # Laporan pertemuan ke -2 sistem operasi
 **Tanggal:** 24 Februari 2026  
-**Disusun Oleh:** Ariel Ardani Aris Putra
-**NIM:** 254107020129
+**Disusun Oleh:** Ariel Ardani Aris Putra  
+**NIM:** 254107020129  
 **Kelas/No:** TI-1G/04
 
 
