@@ -138,27 +138,27 @@ Instruksi cd digunakan untuk pindah dari satu direktori ke direktori lain
 - cat uptime  
 ![a](image/Lat45.png)
 5. Ubahlah direktory home ke user lain secara langsung menggunakan cd ~username.  
-![a](image/Lat.png)
+![a](image/Lat51.png)
 6. Ubah kembali ke direktory home Anda.  
-![a](image/Lat.png)
+![a](image/Lat61.png)
 7. Buat subdirektory work dan play.  
-![a](image/Lat.png)
+![a](image/Lat71.png)
 8. Hapus subdirektory work.  
-![a](image/Lat.png)
+![a](image/Lat81.png)
 9. Copy file /etc/passwd ke direktory home Anda.  
-![a](image/Lat.png)
+![a](image/Lat91.png)
 10. Pindahkan ke subirectory play.  
-![a](image/Lat.png)
+![a](image/Lat101.png)
 11. Ubahlah ke subdirektory play dan buat symbolic link dengan nama terminal yang menunjuk ke perangkat tty. Apa yang terjadi jika melakukan hard link ke perangkat tty ?  
-![a](image/Lat.png)
+![a](image/Lat111.png)
 12. Buatlah file bernama hello.txt yang berisi kata ”hello word”. Dapatkah Anda gunakan ”cp” menggunakan ”terminal” sebagai file asal untuk menghasilkan efek yang sama ?  
-![a](image/Lat.png)
+![a](image/Lat121.png)
 13. Copy hello.txt ke terminal. Apa yang terjadi ?  
-![a](image/Lat.png)
+![a](image/Lat131.png)
 14. Masih direktory home, copy keseluruhan direktory play ke direktory bernama work menggunakan symbolic link.  
-![a](image/Lat.png)
+![a](image/Lat141.png)
 15. Hapus direktory work dan isinya dengan satu perintah.  
-![a](image/Lat.png)
+![a](image/Lat151.png)
 
 ## LAPORAN RESMI:
 
@@ -166,7 +166,16 @@ Instruksi cd digunakan untuk pindah dari satu direktori ke direktori lain
 
     a. Analisa setiap hasil tampilannya.  
     b. Pada Percobaan 1 point 3 buatlah pohon dari struktur file dan direktori.  
-    c. Bila terdapat pesan error, jelaskan penyebabnya.
+    c. Bila terdapat pesan error, jelaskan penyebabnya.   
+Sudah
 
-2. Kerjakan latihan diatas dan analisa hasil tampilannya.
-3. Berikan kesimpulan dari praktikum ini.
+2. Kerjakan latihan diatas dan analisa hasil tampilannya.  
+Sudah
+3. Berikan kesimpulan dari praktikum ini.  
+Dari praktikum ini saya mempelajari tentang operasi file dan struktur direktori pada sistem operasi Linux. Saya memahami bahwa sistem file Linux tersusun secara hierarki seperti struktur pohon yang terdiri dari berbagai direktori utama seperti /bin, /usr/bin, /sbin, /tmp, /boot, /dev, dan /proc, yang masing-masing memiliki fungsi tertentu dalam sistem.
+
+    Selain itu, saya juga mempelajari berbagai perintah dasar untuk menelusuri dan mengelola direktori, seperti cd untuk berpindah direktori, ls untuk melihat isi direktori, pwd untuk mengetahui lokasi direktori saat ini, serta cat untuk menampilkan isi file. Melalui praktikum ini juga dipelajari cara melakukan operasi file, seperti membuat direktori (mkdir), menghapus direktori (rmdir atau rm), menyalin file (cp), serta memindahkan atau mengelola file dalam sistem.
+
+    Saya juga memahami bahwa dalam Linux terdapat direktori khusus seperti /dev yang berisi file perangkat (device file) dan /proc yang merupakan pseudo-filesystem yang menyediakan informasi sistem secara langsung dari kernel. Selain itu, saya mempelajari penggunaan symbolic link yang memungkinkan sebuah file atau direktori memiliki referensi ke lokasi lain.
+
+    Secara keseluruhan, praktikum ini membantu saya memahami konsep dasar operasi file dan struktur direktori di Linux, serta bagaimana menggunakan berbagai perintah untuk mengelola file dan direktori secara efektif dalam lingkungan sistem operasi Linux.
