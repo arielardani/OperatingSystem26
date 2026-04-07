@@ -61,7 +61,41 @@ top tidak berjalan dengan baik, Meskipun setelah perintah bg tampilan top masih 
 ![a](image/lat654.png)  
 ## Latihan 6.6
 1. Gunakan ps aux –sort=%mem untuk menemukan proses yang menggunakan memori paling banyak di VM Anda. Proses apa itu?
-2. Di dalam top, tekan 1 . Apa yang berubah pada tampilan? Mengapa
-informasi ini berguna?
-3. Di dalam htop, navigasikan ke proses sshd menggunakan tombol panah.
-Tekan F9 dan amati opsi sinyal yang tersedia.
+![a](image/lat661.png)  
+proses fwupd yang ada pada direktori /usr/libexec/fwupd/fwupd
+2. Di dalam top, tekan 1 . Apa yang berubah pada tampilan? Mengapa informasi ini berguna?
+![a](image/lat662.png)  
+![a](image/lat663.png)  
+muncul Cpu1 setelah Cpu 0, informasi ini berguna untuk menampilkan Cpu yang ada.
+3. Di dalam htop, navigasikan ke proses sshd menggunakan tombol panah. Tekan F9 dan amati opsi sinyal yang tersedia.
+![a](image/lat664.png)  
+## Latihan 6.A
+Eksplorasi Proses Sistem
+1. Jalankan ps aux –-forest dan temukan proses dengan PID 1. Apa nama dan fungsi proses tersebut dalam sistem Linux modern?
+![a](image/lat6a1.png)  
+nama /sbin/init. yang berfungsi mengelola proses lain, menjalankan layanan (seperti sshd tadi), dan memastikan sistem siap dipakai. Kalau systemd mati, sistem bakal crash (Kernel Panic).
+2. Hitung berapa proses yang dimiliki oleh user root dan berapa yang dimiliki oleh user Anda. Mengapa root memiliki lebih banyak proses?
+![a](image/lat6a2.png)  
+Root harus menjalankan semua layanan latar belakang (background services/daemons) yang menjaga agar sistem operasi tetap hidup (seperti manajemen jaringan, log sistem, manajemen disk, keamanan, dll). Sedangkan User  biasanya cuma menjalankan proses yang berkaitan dengan aktivitas login
+3. Temukan semua proses yang berada dalam kondisi S. Mengapa sebagian besar proses di sistem berada dalam kondisi ini?
+![a](image/lat6a3.png)  
+Sebagian besar proses di sistem Linux dalam kondisi S supaya penggunaan CPU tetap rendah (0%) dan baterai/daya VM nggak boros. Kalau semuanya R, VM bakal langsung panas dan lemot!
+## Latihan 6.B
+Simulasi Manajemen Job
+1. Jalankan tiga perintah sleep dengan durasi 100, 200, dan 300 detik di background. Verifikasi ketiganya dengan jobs.
+![a](image/lat6b1.png)  
+2. Bawa job kedua ke foreground, jeda dengan Ctrl+Z , lalu kembalikan ke background dengan bg.
+![a](image/lat6b2.png)  
+3. Hentikan job pertama dengan kill %1. Tampilkan kembali daftar job. Berapa job yang tersisa?  
+![a](image/lat6b3.png)  
+tersisa 2 job.
+## Latihan 6.C
+Prioritas dan Sinyal
+1. Jalankan dua proses sleep: satu dengan nice +5 dan satu dengan nice +15. Verifikasi nilai NI keduanya dengan ps.
+![a](image/lat6c1.png)  
+2. Gunakan renice untuk mengubah nice proses pertama menjadi +10. Proses mana yang kini lebih diprioritaskan scheduler?
+![a](image/lat6c2.png)  
+Di Linux, angka nice yang lebih kecil (mendekati -20) punya prioritas lebih tinggi, sedangkan angka yang besar (mendekati 19) punya prioritas rendah. maka proses yang pertama tetap diutamakan
+3. Kirim SIGSTOP ke salah satu proses, verifikasi kondisi T-nya, lalu kirim SIGCONT. Akhiri semua proses percobaan dengan pkill sleep.
+
+![a](image/lat6c3.png)  
