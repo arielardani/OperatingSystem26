@@ -1,4 +1,4 @@
-# Laporan pertemuan ke -4 sistem operasi
+# Laporan pertemuan ke -6 sistem operasi
 **Tanggal:** 04 Maret 2026  
 **Disusun Oleh:** Ariel Ardani Aris Putra  
 **NIM:** 2541070200129  
