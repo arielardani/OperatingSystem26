@@ -16,15 +16,15 @@ Instruksi tugas:
 • membuat minimal 2 alias yang membantu kerja harian,
 • membuat minimal 1 fungsi shell yang berguna untuk administrasi.
 dikarenakan akan mengotak atik file system backup dulu file tersebut agar bisa menjadi checkpoint.      
-![a](image/11.png) 
+![a](image/11.png)   
 lalu lakukan konfigurasi
 ![a](image/12.png) 
 
 
 2. Pastikan konfigurasi tersebut aktif kembali saat membuka shell login.  
-Gunakan perintah source ~/.bashrc
-![a](image/13.png) 
-lalu buar folder dengan perintah  
+Gunakan perintah source ~/.bashrc   
+![a](image/13.png)   
+lalu buar folder dengan perintah     
 mkdir -p ~/praktikum-os/week07-bash/bin
 3. Buat satu script sederhana di direktori bin pribadi, misalnya script untuk
 menampilkan ringkasan sistem.  
@@ -139,13 +139,13 @@ Instruksi tugas:
 ![a](image/41.png)    
 2. Tunjukkan perbedaan hasil jika file diakses tanpa quoting dan dengan quoting yang benar.
 ![a](image/42.png)    
-3. Lakukan preview wildcard dengan echo sebelum dipakai untuk operasi nyata.
+3. Lakukan preview wildcard dengan echo sebelum dipakai untuk operasi nyata.  
 ![a](image/43.png)     
-4. Salin file-file tersebut ke direktori backup dengan nama yang aman.
+4. Salin file-file tersebut ke direktori backup dengan nama yang aman.  
 ![a](image/44.png)    
-5. Buat arsip tar.gz dari hasil backup.
+5. Buat arsip tar.gz dari hasil backup.   
 ![a](image/45.png)    
-6. Simpan riwayat perintah yang Anda gunakan ke file riwayat-arsip.txt.
+6. Simpan riwayat perintah yang Anda gunakan ke file riwayat-arsip.txt.   
 ![a](image/46.png)    
 Syarat konsep yang harus muncul:
 • single quote, double quote, dan escaping,
@@ -158,5 +158,5 @@ Minimal luaran:
 • daftar file hasil backup,
 • file arsip tar.gz,
 • file riwayat-arsip.txt,
-• refleksi singkat tentang pentingnya quoting di Bash.
+• refleksi singkat tentang pentingnya quoting di Bash.  
 ![a](image/47.png)      
