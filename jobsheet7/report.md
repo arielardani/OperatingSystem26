@@ -47,7 +47,7 @@ nano kalkulator.sh
 ```
 - isikan dengan:   
 ![a](image/10.png)  
-- beri izin execute dan jalankan
+- beri izin execute dan jalankan   
 ![a](image/11.png)  
 
 ## Praktikum 7.3 Script Grading dan Menu Interaktif
@@ -124,18 +124,18 @@ Script debug-latihan.sh tidak menangani direktori yang tidak ada. Perbaiki denga
 Uji dengan direktori yang tidak ada.
 - tambahan kode pada file debug-latihan.sh   
 ![a](image/28.png)   
-- Hasil test
+- Hasil test   
 ![a](image/29.png)    
 ## Tugas 1 Script Absensi Kelas  
 1. buat file script dengan perintah:
 ```
 nano absensi.sh
 ```
-2. isi file:
+2. isi file:    
 ![a](image/30.png)   
 ![a](image/31.png)   
 ![a](image/32.png)  
-3. beri izin execute dan jalankan: 
+3. beri izin execute dan jalankan:    
 ![a](image/33.png)   
 ![a](image/34.png)   
 ## Tugas 2 Script Health Check Sistem
@@ -143,11 +143,11 @@ nano absensi.sh
 ```
 healthcheck.sh
 ```
-2. isi file:
+2. isi file:   
 ![a](image/35.png)   
 ![a](image/36.png)   
 ![a](image/37.png)   
-3. beri izin dan jalankan file  
+3. beri izin dan jalankan file:    
 ![a](image/38.png)   
 
 
