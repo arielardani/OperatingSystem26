@@ -691,5 +691,46 @@ ariel@ubuntuser:~/lab-os/chapter10-services$ echo $?
 ariel@ubuntuser:~/lab-os/chapter10-services$ sudo systemctl reload ssh
 ```
 3. Setelah reload, verifikasi tiga hal: layanan masih berjalan (systemctl status ssh), port masih mendengarkan (ss -tlnp | grep ssh), dan konfigurasi baru terbaca (grep -E "PermitRoot|MaxAuth|GraceTime" /etc/ssh/sshd_config).
+```
+ariel@ubuntuser:~/lab-os/chapter10-services$ systemctl status ssh
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2026-05-20 16:15:23 UTC; 38min ago
+TriggeredBy: ● ssh.socket
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+    Process: 3104 ExecReload=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+    Process: 3105 ExecReload=/bin/kill -HUP $MAINPID (code=exited, status=0/SUCCESS)
+   Main PID: 2500 (sshd)
+      Tasks: 6 (limit: 4008)
+     Memory: 184.1M (peak: 256.2M)
+        CPU: 11.158s
+     CGroup: /system.slice/ssh.service
+             ├─2472 "sshd: ariel [priv]"
+             ├─2474 "sshd: ariel@pts/0"
+             ├─2475 -bash
+             ├─2500 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+             ├─3108 systemctl status ssh
+             └─3109 less
 
+May 20 16:49:48 ubuntuser sudo[3084]: pam_unix(sudo:session): session closed for user root
+May 20 16:49:57 ubuntuser sudo[3088]:    ariel : TTY=pts/0 ; PWD=/home/ariel/lab-os/chapter10-services ; USER=root ; CO>
+May 20 16:49:57 ubuntuser sudo[3088]: pam_unix(sudo:session): session opened for user root(uid=0) by ariel(uid=1000)
+May 20 16:51:25 ubuntuser sudo[3088]: pam_unix(sudo:session): session closed for user root
+May 20 16:52:07 ubuntuser sudo[3097]:    ariel : TTY=pts/0 ; PWD=/home/ariel/lab-os/chapter10-services ; USER=root ; CO>
+May 20 16:52:07 ubuntuser sudo[3097]: pam_unix(sudo:session): session opened for user root(uid=0) by ariel(uid=1000)
+May 20 16:52:07 ubuntuser sudo[3097]: pam_unix(sudo:session): session closed for user root
+May 20 16:52:27 ubuntuser sudo[3100]:    ariel : TTY=pts/0 ; PWD=/home/ariel/lab-os/chapter10-services ; USER=root ; CO>
+May 20 16:52:27 ubuntuser sudo[3100]: pam_unix(sudo:session): session opened for user root(uid=0) by ariel(uid=1000)
+ariel@ubuntuser:~/lab-os/chapter10-services$ ss -tlnp | grep ssh
+ariel@ubuntuser:~/lab-os/chapter10-services$ grep -E "PermitRoot|MaxAuth|GraceTime" /etc/ssh/sshd_config
+PermitRootLogin no
+MaxAuthTries 3
+LoginGraceTime 30
+```
 4. Kembalikan konfigurasi SSH ke kondisi semula menggunakan berkas backup.
+```
+ariel@ubuntuser:~/lab-os/chapter10-services$ sudo cp /etc/ssh/sshd_config.backup.latihan10 /etc/ssh/sshd_config
+ariel@ubuntuser:~/lab-os/chapter10-services$ sudo sshd -t
+ariel@ubuntuser:~/lab-os/chapter10-services$ sudo systemctl reload ssh
+```
